@@ -23,7 +23,7 @@
       </header>
       <div class="scroll-wrap">
         <a href="#" class="scroll"
-          ><svg width="35" height="100" viewBox="0 0 332 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+          ><svg width="35" height="100" viewBox="0 0 332 512" fill="none" xmlns="http://www.w3.org/2000/svg" id="scroll">
             <path
               d="M166.238 430.145L76.4688 335.246L105.527 307.758L166.16 371.855L226.434 307.797L255.566 335.207L166.238 430.145ZM332 392V120C332 53.832 278.168 0 212 0H120C53.832 0 0 53.832 0 120V392C0 458.168 53.832 512 120 512H212C278.168 512 332 458.168 332 392ZM212 40C256.113 40 292 75.8867 292 120V392C292 436.113 256.113 472 212 472H120C75.8867 472 40 436.113 40 392V120C40 75.8867 75.8867 40 120 40H212ZM166 81C154.953 81 146 89.9531 146 101C146 112.047 154.953 121 166 121C177.047 121 186 112.047 186 101C186 89.9531 177.047 81 166 81ZM166 161C154.953 161 146 169.953 146 181C146 192.047 154.953 201 166 201C177.047 201 186 192.047 186 181C186 169.953 177.047 161 166 161ZM166 241C154.953 241 146 249.953 146 261C146 272.047 154.953 281 166 281C177.047 281 186 272.047 186 261C186 249.953 177.047 241 166 241Z"
             />
@@ -67,5 +67,18 @@
         <h2>Lorem ipsum dolor sit amet consectetur.</h2>
       </div>
     </div>
+    <script>
+      window.onscroll = function() {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+          document.getElementById("scroll").style.display = "none";
+        } else {
+          document.getElementById("scroll").style.display = "block";
+        }
+      }
+    </script>
   </body>
 </html>

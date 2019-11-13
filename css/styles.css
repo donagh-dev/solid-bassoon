@@ -5,7 +5,7 @@
 }
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-image: url(imgs/bg.jpg);
+  background-image: url(../imgs/bg.jpg);
   width: 100%;
   min-height: 100vh;
   background-position: center;
@@ -46,6 +46,7 @@ ul {
   max-width: 100%;
   background: black;
   padding: 5px;
+  z-index: 2;
 }
 .logo {
   justify-self: center;
@@ -75,13 +76,13 @@ ul {
   grid-row: 1 / 2;
 }
 .scroll svg {
+  display: block;
   fill: white;
 }
 .scroll {
-  fill: #fff;
-
   justify-self: center;
   align-self: flex-end;
+  animation: scroll alternate 1s ease infinite;
 }
 .content {
   display: grid;
@@ -95,4 +96,9 @@ ul {
 }
 .content * {
   padding: 2rem;
+}
+@keyframes scroll {
+  to {
+    transform: translateY(20px);
+  }
 }
