@@ -17,11 +17,24 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  padding: 5px 10px;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -ms-transition: all 1s ease-out;
+  transition: all 1s ease-out;
 }
 a:hover {
   text-decoration: none;
-  color: #39ff14;
+  color: #e14d7e;
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
+
 ul {
   list-style-type: none;
 }
@@ -53,6 +66,7 @@ ul {
   align-self: center;
   font-size: 1.1rem;
   font-weight: bold;
+  color: #1d6cb0;
 }
 .nav {
   justify-self: center;
@@ -67,22 +81,51 @@ ul {
   align-self: center;
   font-size: 1.1rem;
   font-weight: bold;
-  align-self: center;
+  color: #1d6cb0;
 }
-.scroll-wrap {
+.anime-wrap {
+  position: relative;
   display: grid;
-  height: 100vh;
+  height: 50vh;
+  width: 100%;
   grid-column: 1 / 13;
   grid-row: 1 / 2;
 }
+.anime {
+  position: relative;
+  justify-self: center;
+  text-anchor: middle;
+  align-self: flex-end;
+  width: 100%;
+  transform: translateY(-30vh);
+}
+.anime text {
+  font-size: 3rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  fill: #4d1b4369;
+  stroke: #e14d7e;
+  stroke-linejoin: round;
+  stroke-dasharray: 203;
+  stroke-dashoffset: 203;
+  animation: stroke 2s alternate ease-in-out infinite;
+}
+.scroll-wrap {
+  display: grid;
+  height: 50vh;
+  grid-column: 1 / 13;
+  grid-row: 2 / 3;
+}
 .scroll svg {
   display: block;
-  fill: white;
+  fill: rgba(255, 255, 255, 0.5);
+  animation: scroll alternate 1s ease-in infinite;
 }
 .scroll {
   justify-self: center;
   align-self: flex-end;
-  animation: scroll alternate 1s ease infinite;
 }
 .content {
   display: grid;
@@ -91,14 +134,25 @@ ul {
   background: rgb(20, 20, 20);
   justify-items: center;
   text-align: center;
-  padding: 2rem 0;
+  padding: 2rem;
   grid-gap: 1rem;
+  margin: 0 2rem;
+}
+.content p {
+  line-height: 1.8rem;
+  padding-bottom: 2rem;
 }
 .content * {
-  padding: 2rem;
+  padding-top: 2rem;
 }
 @keyframes scroll {
   to {
     transform: translateY(20px);
+    fill: rgba(255, 255, 255, 1);
+  }
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
   }
 }
