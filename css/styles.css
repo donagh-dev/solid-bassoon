@@ -12,7 +12,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  color: white;
+  color: #4c8791;
 }
 a {
   text-decoration: none;
@@ -34,13 +34,20 @@ a:hover {
   -ms-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #1d6cb0;
+}
 
 ul {
   list-style-type: none;
 }
 .wrapper {
   position: relative;
-  display: grid;
   min-height: 100vh;
   width: 1366px;
   max-width: 100%;
@@ -51,8 +58,6 @@ ul {
 .header-nav {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-column: 1 / 13;
-  grid-row: 1 / 2;
   max-height: 3rem;
   position: fixed;
   width: 1366px;
@@ -88,8 +93,6 @@ ul {
   display: grid;
   height: 50vh;
   width: 100%;
-  grid-column: 1 / 13;
-  grid-row: 1 / 2;
 }
 .anime {
   position: relative;
@@ -115,8 +118,6 @@ ul {
 .scroll-wrap {
   display: grid;
   height: 50vh;
-  grid-column: 1 / 13;
-  grid-row: 2 / 3;
 }
 .scroll svg {
   display: block;
@@ -129,7 +130,6 @@ ul {
 }
 .content {
   display: grid;
-  grid-column: 1 / 13;
   grid-template-columns: auto;
   background: rgb(20, 20, 20);
   justify-items: center;
